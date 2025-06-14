@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+@theme {
+    --font-poppins:'Poppins','sans-serif';
+}
+*,*::before,*::after{
+    @apply
+    text-amber-50
+
+    font-poppins;
+}
+.wrapper{
+    @apply 
+    w-[100vw] h-[100vh] grid place-items-center
+    bg-[url(../images/gradient-bg.jpg)]
+    content-evenly
+    bg-cover;
+}
+.game-info{
+    @apply
+    absolute
+    top-[4rem]
+    rounded-[1rem] border-1 border-white/25
+    p-[0.5rem] px-[3rem]
+    shadow-lg
+    bg-white/15;
+   
+}
+.tic-tac-toe{
+    @apply
+    w-[90%]
+    max-w-[20rem]
+    rounded-[1rem] border-[1px] border-white/25
+    p-[2rem]
+    shadow-lg
+    bg-white/15
+    grid grid-cols-3  aspect-1/1
+    ;
+}
+.box{
+    @apply
+    relative w-[100%]
+    aspect-1/1
+    cursor-pointer
+   text-[2rem]
+    flex justify-center items-center;
+}
+.box-1,.box-2,.box-4,.box-5{
+    @apply
+    border-b-[2px] border-r-[2px] border-amber-50;
+}
+.box-3,.box-6{
+    @apply
+    border-b-[2px] border-amber-50;
+}
+.box-7,.box-8{
+    @apply
+    border-r-[2px] border-amber-50;
+}
+.btn{
+    @apply
+    absolute
+    bottom-[3rem]
+    cursor-pointer
+    rounded-[1rem] border-1 border-white/25
+    p-[0.5rem] px-[3rem]
+    shadow-lg
+    bg-white/15;
+    display: none;
+}
+.btn-active{
+    display: flex;
+}
+.win{
+    @apply
+    bg-green-500/30;
+}
